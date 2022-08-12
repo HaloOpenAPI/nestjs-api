@@ -2,8 +2,8 @@
 import { HttpService } from '@nestjs/axios';
 import { Injectable } from '@nestjs/common';
 import { lastValueFrom, map } from 'rxjs';
-import { MatchesCountModel, MatchesModel, MatchesPrivacy } from 'src/models/players';
-import { HaloWaypointAuthenticate } from 'src/utils/auth';
+import { MatchesCountModel, MatchesModel, MatchesPrivacy } from '../../models/players';
+import { HaloWaypointAuthenticate } from '../../utils/auth';
 
 @Injectable()
 export class PlayersService {
