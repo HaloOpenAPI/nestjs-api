@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { HttpModule } from '@nestjs/axios';
 import { Module } from '@nestjs/common';
-import { HaloWaypointAuthenticate } from 'src/utils/auth';
+import { HaloWaypointAuthenticate } from '../../utils/auth';
 import { PlayersController } from './players.controller';
 import { PlayersService } from './players.service';
 

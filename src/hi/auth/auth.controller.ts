@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { Body, Controller, Get, Param, Post, Query, Response } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
-import { UserToken } from 'src/models/auth';
+import { UserToken } from '../../models/auth';
 import { AuthService } from './auth.service';
 import * as express from 'express';
 import { XboxService } from '../xbox/xbox.service';

@@ -3,7 +3,7 @@ import { Injectable } from '@nestjs/common';
 import 'dotenv/config';
 import { HttpService } from '@nestjs/axios';
 import { lastValueFrom, map } from 'rxjs';
-import { HaloWaypointAuthenticate } from 'src/utils/auth';
+import { HaloWaypointAuthenticate } from '../../utils/auth';
 
 @Injectable()
 export class PlaylistService {  

@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { Controller, Get, Param, Query } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
-import { MatchesCountModel, MatchesModel, MatchesPrivacy, MatchesQuery } from 'src/models/players';
+import { MatchesCountModel, MatchesModel, MatchesPrivacy, MatchesQuery } from '../../models/players';
 import { PlayersService } from './players.service';
 
 @ApiTags('Players')

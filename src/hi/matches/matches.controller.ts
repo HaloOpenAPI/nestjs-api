@@ -1,8 +1,8 @@
 /* eslint-disable prettier/prettier */
 import { Controller, Get, Param, Query, Headers  } from '@nestjs/common';
 import { ApiHeader, ApiTags } from '@nestjs/swagger';
-import { MatchDetails } from 'src/models/matches';
-import { HaloWaypointAuthenticate } from 'src/utils/auth';
+import { MatchDetails } from '../../models/matches';
+import { HaloWaypointAuthenticate } from '../../utils/auth';
 import { MatchesService } from './matches.service';
 
 @ApiHeader({
