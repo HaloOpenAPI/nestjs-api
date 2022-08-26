@@ -23,9 +23,9 @@ export class HaloWaypointAuthenticate {
     }
       
     constructor() {
-        this.authenticate(process.env.HALOWAYPOINT_EMAIL, process.env.HALOWAYPOINT_PASSWORD).then(res => {
-            this.headers['x-343-authorization-spartan'] = res.cookies.spartanToken;
-        });
+        // this.authenticate(process.env.HALOWAYPOINT_EMAIL, process.env.HALOWAYPOINT_PASSWORD).then(res => {
+        //     this.headers['x-343-authorization-spartan'] = res.cookies.spartanToken;
+        // });
     }
 
     private static readonly PRE_AUTH_OPTIONS: LivePreAuthOptions = {
