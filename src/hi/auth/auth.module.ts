@@ -1,7 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { HttpModule } from '@nestjs/axios';
 import { Module } from '@nestjs/common';
-import { HaloWaypointAuthenticate } from '../../utils/auth';
 import { XboxService } from '../xbox/xbox.service';
 import { AuthController } from './auth.controller';
 import { AuthService } from './auth.service';
@@ -9,7 +8,7 @@ import { AuthService } from './auth.service';
 @Module({
   imports: [HttpModule],
   controllers: [AuthController],
-  providers: [AuthService, HaloWaypointAuthenticate, XboxService],
+  providers: [AuthService, XboxService],
   exports: [AuthModule]
 })
 export class AuthModule {}
