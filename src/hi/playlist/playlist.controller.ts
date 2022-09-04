@@ -10,9 +10,9 @@ export class PlaylistController {
       private readonly playlistService: PlaylistService
     ) {}
 
-    @Get(':playlistId/csrs')
-    getPlaylistCSR(@Headers() headers, @Param('playlistId') playlistId: string, @Query('players') players: string[]): any {
-        return this.playlistService.getPlaylistCSR(playlistId, players);
-    }
+    // @Get(':playlistId/csrs')
+    // getPlaylistCSR(@Headers() headers, @Param('playlistId') playlistId: string, @Query('players') players: string[]): any {
+    //     return this.playlistService.getPlaylistCSR(playlistId, players);
+    // }
 
 }

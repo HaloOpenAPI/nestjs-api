@@ -9,18 +9,18 @@ import { PlayersService } from './players.service';
 export class PlayersController {
     constructor(private readonly playersService: PlayersService) {}
 
-    @Get(':gamertag/matches-privacy')
-    getMatchesPrivacy(@Param('gamertag') gamertag: string): Promise<MatchesPrivacy> {
-        return this.playersService.getMatchesPrivacy(gamertag);
-    }
+    // @Get(':gamertag/matches-privacy')
+    // getMatchesPrivacy(@Param('gamertag') gamertag: string): Promise<MatchesPrivacy> {
+    //     return this.playersService.getMatchesPrivacy(gamertag);
+    // }
 
-    @Get(':gamertag/matches')
-    getMatches(@Param('gamertag') gamertag: string, @Query() query: MatchesQuery): Promise<MatchesModel[]> {
-        return this.playersService.getMatches(gamertag, query.count, query.start);
-    }
+    // @Get(':gamertag/matches')
+    // getMatches(@Param('gamertag') gamertag: string, @Query() query: MatchesQuery): Promise<MatchesModel[]> {
+    //     return this.playersService.getMatches(gamertag, query.count, query.start);
+    // }
 
-    @Get(':gamertag/matches/count')
-    getMatchesCount(@Param('gamertag') gamertag: string): Promise<MatchesCountModel> {
-        return this.playersService.getMatchesCount(gamertag);
-    }
+    // @Get(':gamertag/matches/count')
+    // getMatchesCount(@Param('gamertag') gamertag: string): Promise<MatchesCountModel> {
+    //     return this.playersService.getMatchesCount(gamertag);
+    // }
 }
