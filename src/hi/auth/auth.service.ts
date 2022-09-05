@@ -133,8 +133,8 @@ export class AuthService {
     }
 
     //TODO: Make a post with XUID
-    async GetClearance(spartanToken: string){
-        const url = new URL('https://settings.svc.halowaypoint.com/oban/flight-configurations/titles/hi/audiences/RETAIL/players/xuid(2535450000519548)/active?sandbox=UNUSED&build=210921.22.01.10.1706-0');
+    async GetClearance(spartanToken: string, xuid: string){
+        const url = new URL(`https://settings.svc.halowaypoint.com/oban/flight-configurations/titles/hi/audiences/RETAIL/players/xuid(${xuid})/active?sandbox=UNUSED&build=210921.22.01.10.1706-0`);
 
         return await lastValueFrom(this.httpService.get<any>(url.toString(), {
             headers: {

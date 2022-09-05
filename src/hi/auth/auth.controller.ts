@@ -46,7 +46,7 @@ export class AuthController {
       const XUID = await this.authService.WaypointUser(SpartanToken.SpartanToken);
 
       const [Clearance, XboxProfile] = await Promise.all([
-        this.authService.GetClearance(SpartanToken.SpartanToken),
+        this.authService.GetClearance(SpartanToken.SpartanToken, XUID.xuid),
         this.xboxService.getProfile({
           "authorization": this.GetXboxLiveV3Token(XstsTokenXbox),
           "x-xbl-contract-version": 2,
@@ -81,7 +81,8 @@ export class AuthController {
 
     @Get('GetClearance/:spartanToken')
     GetClearance(@Param('spartanToken') spartanToken: string):any {
-      return this.authService.GetClearance(spartanToken)
+      //TODO: Make it a post with XUID
+      // return this.authService.GetClearance(spartanToken)
     }
 
     @Get('GetWaypointUser/:spartanToken')
